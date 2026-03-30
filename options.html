@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>PPZ Reader Options</title>
+		<style>
+			body {
+				line-height: 1.5;
+			}
+			.row {
+				margin: 1lh;
+				label {
+					display: block;
+					margin-block: 0 .5lh;
+				}
+				select, input {
+					width: min(100%, 360px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			<label for="voice">语音（Voice）</label>
+			<select id="voice"></select>
+		</div>
+
+		<div class="row">
+			<label for="rate">
+				语速（Rate）：
+				<span id="rate-val"></span>
+			</label>
+			<input id="rate" type="range" min="0.5" max="2.0" step="0.1" />
+		</div>
+
+		<script src="options.js"></script>
+	</body>
+</html>
+

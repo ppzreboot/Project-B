@@ -1,27 +1,31 @@
 {
-  "manifest_version": 3,
-  "name": "PPZ English Reader",
-  "version": "0.0.0",
-  "description": "选中网页文字后，用快捷键朗读英文",
-  "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["http://*/*", "https://*/*"],
-  "background": {
-    "service_worker": "background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
-    }
-  ],
-  "commands": {
-    "read-selection": {
-      "suggested_key": {
-        "default": "Ctrl+1",
-        "mac": "Command+1"
-      },
-      "description": "朗读当前选中的文字"
-    }
-  }
+	"manifest_version": 3,
+	"name": "PPZ English Reader",
+	"version": "0.0.0",
+	"description": "选中网页文字后，用快捷键朗读英文",
+	"permissions": ["activeTab", "scripting", "storage"],
+	"host_permissions": ["http://*/*", "https://*/*"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["content.js"],
+			"run_at": "document_idle"
+		}
+	],
+	"commands": {
+		"read-selection": {
+			"suggested_key": {
+				"default": "Ctrl+1",
+				"mac": "Command+1"
+			},
+			"description": "朗读当前选中的文字"
+		}
+	},
+	"options_ui": {
+		"page": "options.html",
+		"open_in_tab": true
+	}
 }
