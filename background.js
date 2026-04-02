@@ -23,3 +23,7 @@ chrome.commands.onCommand.addListener(async command => {
 
 	await chrome.tabs.sendMessage(tab.id, { type: command })
 })
+
+chrome.action.onClicked.addListener(() => {
+	chrome.runtime.openOptionsPage()
+})

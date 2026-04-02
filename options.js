@@ -51,10 +51,10 @@ async function init() {
 		render_rate_label(rate)
 	}
 
+	render_voice_options()
 	if (opts.voice)
 		voice_select.value = opts.voice
 	render_rate(opts.rate || 1)
-	render_voice_options()
 
 	rate_input.addEventListener('input', () => {
 		save_settings()
@@ -62,7 +62,11 @@ async function init() {
 	})
 	voice_select.addEventListener('change', save_settings)
 
-	speechSynthesis.addEventListener('voiceschanged', render_voice_options)
+	speechSynthesis.addEventListener('voiceschanged', () => {
+		render_voice_options()
+		if (opts.voice)
+			voice_select.value = opts.voice
+	})
 }
 
 init()
