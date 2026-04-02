@@ -11,21 +11,29 @@ async function load_settings() {
 	return { voice, rate }
 }
 
+let last_utterance = null
 async function read_selection() {
-	const text = window.getSelection()?.toString().trim()
-	if (!text) return
 	window.speechSynthesis.cancel()
+	const text = window.getSelection()?.toString().trim()
+	if (!text) {
+		if (last_utterance === null)
+			return
+		else {
+			window.speechSynthesis.speak(last_utterance)
+			return
+		}
+	}
 	console.log('reading selection:', text)
 
 	const opts = await load_settings()
 	const voice = get_selected_voice(opts.voice)
 
-	const utterance = new SpeechSynthesisUtterance(text)
-	utterance.lang = 'en-US'
-	utterance.rate = opts.rate ?? 1
-	utterance.voice = voice
+	last_utterance = new SpeechSynthesisUtterance(text)
+	last_utterance.lang = 'en-US'
+	last_utterance.rate = opts.rate ?? 1
+	last_utterance.voice = voice
 
-	window.speechSynthesis.speak(utterance)
+	window.speechSynthesis.speak(last_utterance)
 }
 
 function get_selected_voice(voice) {
