@@ -1,6 +1,6 @@
 {
 	"manifest_version": 3,
-	"name": "PPz En Reader",
+	"name": "Prob",
 	"version": "0.0.0",
 	"description": "选中网页文字后，用快捷键朗读英文",
 	"permissions": ["storage"],
@@ -15,7 +15,7 @@
 		"service_worker": "background.js"
 	},
 	"action": {
-		"default_title": "PPz En Reader"
+		"default_title": "Prob"
 	},
 	"content_scripts": [
 		{
