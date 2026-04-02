@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Prob - Privacy Policy</title>
+		<style>
+			:root {
+				color-scheme: light dark;
+			}
+			body {
+				font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+					Arial, "Apple Color Emoji", "Segoe UI Emoji";
+				line-height: 1.6;
+				margin: 0;
+				padding: 24px;
+			}
+			main {
+				max-width: 860px;
+				margin: 0 auto;
+			}
+			h1, h2, h3 {
+				line-height: 1.25;
+			}
+			code {
+				font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+					"Courier New", monospace;
+				font-size: 0.95em;
+			}
+			.card {
+				border: 1px solid rgba(127, 127, 127, 0.25);
+				border-radius: 12px;
+				padding: 16px 18px;
+				margin: 16px 0;
+				background: rgba(127, 127, 127, 0.06);
+			}
+			.small {
+				opacity: 0.85;
+				font-size: 0.95em;
+			}
+			ul {
+				padding-left: 20px;
+			}
+			hr {
+				border: none;
+				border-top: 1px solid rgba(127, 127, 127, 0.25);
+				margin: 24px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>Privacy Policy</h1>
+			<p class="small">
+				<strong>Extension</strong>: Prob<br />
+				<strong>Last updated</strong>: 2026-04-02
+			</p>
+
+			<div class="card">
+				<h2>Summary</h2>
+				<ul>
+					<li><strong>No account required</strong>. The extension does not create user accounts.</li>
+					<li><strong>No analytics</strong>. The extension does not include analytics or tracking.</li>
+					<li><strong>No selling/sharing</strong>. The extension does not sell or share personal data.</li>
+					<li>
+						<strong>Local-only settings</strong>. Voice and speech rate preferences are stored locally via
+						<code>chrome.storage.local</code>.
+					</li>
+					<li>
+						<strong>No remote code</strong>. The extension package does not load or execute code from remote
+						servers.
+					</li>
+				</ul>
+			</div>
+
+			<h2>What the extension does</h2>
+			<p>
+				Prob reads aloud text that you select on a webpage using the browser’s built-in speech
+				synthesis (Text-to-Speech) capability. Reading is triggered only when you use the extension’s
+				command (keyboard shortcut).
+			</p>
+
+			<h2>Information we collect</h2>
+			<p><strong>We do not collect personal data.</strong></p>
+			<p>
+				The extension does not collect, transmit, or store browsing history, page content, or personally
+				identifiable information.
+			</p>
+
+			<h2>Selected text</h2>
+			<p>
+				When you trigger the “read selection” command, the extension accesses only the text you have
+				currently selected in the active webpage so it can be spoken aloud.
+			</p>
+			<ul>
+				<li><strong>Not transmitted</strong>: selected text is not sent to any server.</li>
+				<li><strong>Not stored</strong>: selected text is not permanently stored by the extension.</li>
+			</ul>
+
+			<h2>Storage</h2>
+			<p>
+				The extension uses <code>chrome.storage.local</code> to store user preferences locally on your
+				device:
+			</p>
+			<ul>
+				<li><strong>Voice</strong>: which speech synthesis voice you selected.</li>
+				<li><strong>Rate</strong>: the speech rate you selected.</li>
+			</ul>
+			<p>
+				This data stays on your device and is used only to keep your preferences between sessions. It is
+				not shared with third parties.
+			</p>
+
+			<h2>Permissions we use and why</h2>
+			<ul>
+				<li>
+					<strong><code>storage</code></strong>: to save your voice/rate preferences locally.
+				</li>
+				<li>
+					<strong>Host permissions (<code>http://*/*</code>, <code>https://*/*</code>)</strong>: to run the
+					content script on the pages you visit so the extension can access your current text selection when
+					you trigger the read command. The extension does not automatically read or transmit page data.
+				</li>
+			</ul>
+
+			<h2>Third-party services</h2>
+			<p>
+				The extension does not use third-party services to process your data. Speech playback uses the
+				browser/OS speech synthesis voices available on your device.
+			</p>
+
+			<h2>Children’s privacy</h2>
+			<p>
+				The extension is not directed to children under 13 and does not knowingly collect personal data.
+			</p>
+
+			<h2>Changes to this policy</h2>
+			<p>
+				We may update this policy from time to time. Updates will be posted on this page with a new “Last
+				updated” date.
+			</p>
+
+			<h2>Contact</h2>
+			<p class="small">
+				If you have questions about this policy, please contact the developer via the support channel listed
+				on the Chrome Web Store listing.
+			</p>
+
+			<hr />
+
+			<h1>隐私政策（中文）</h1>
+			<p class="small">
+				<strong>扩展</strong>：Prob<br />
+				<strong>更新时间</strong>：2026-04-02
+			</p>
+
+			<div class="card">
+				<h2>要点</h2>
+				<ul>
+					<li><strong>不需要账号</strong>：扩展不创建用户账号。</li>
+					<li><strong>不做统计/追踪</strong>：扩展不包含分析/埋点/追踪。</li>
+					<li><strong>不出售/不共享</strong>：扩展不会出售或共享个人信息。</li>
+					<li><strong>仅本地保存设置</strong>：语音与语速偏好使用 <code>chrome.storage.local</code> 存在本机。</li>
+					<li><strong>不使用远程代码</strong>：扩展不会从远端服务器加载或执行代码。</li>
+				</ul>
+			</div>
+
+			<h2>扩展做什么</h2>
+			<p>
+				Prob 会在你选中网页文字后，通过浏览器内置的语音合成（TTS）朗读。只有当你手动触发扩展的朗读命令（快捷键）时，才会开始朗读。
+			</p>
+
+			<h2>我们收集哪些信息</h2>
+			<p><strong>我们不收集个人信息。</strong></p>
+			<p>
+				扩展不会收集、上传或保存你的浏览历史、网页内容、或可用于识别个人身份的信息。
+			</p>
+
+			<h2>关于“选中文本”</h2>
+			<p>当你触发“朗读选中文本”命令时，扩展仅访问当前页面上你选中的那段文字，用于朗读。</p>
+			<ul>
+				<li><strong>不会上传</strong>：选中文本不会发送到任何服务器。</li>
+				<li><strong>不会长期存储</strong>：选中文本不会被扩展永久保存。</li>
+			</ul>
+
+			<h2>本地存储（storage）</h2>
+			<p>扩展使用 <code>chrome.storage.local</code> 在本机保存以下偏好设置：</p>
+			<ul>
+				<li><strong>语音（Voice）</strong>：你选择的朗读声音。</li>
+				<li><strong>语速（Rate）</strong>：你设置的朗读速度。</li>
+			</ul>
+			<p>这些数据仅用于在下次使用时保持设置，不会与第三方共享。</p>
+
+			<h2>我们使用的权限及原因</h2>
+			<ul>
+				<li><strong><code>storage</code></strong>：用于保存语音/语速偏好到本机。</li>
+				<li>
+					<strong>站点权限（<code>http://*/*</code>、<code>https://*/*</code>）</strong>：用于在你访问的网页上运行内容脚本，以便在你手动触发朗读时读取你当前选中的文字。扩展不会自动读取或上传网页内容。
+				</li>
+			</ul>
+
+			<h2>第三方服务</h2>
+			<p>
+				扩展不使用第三方服务处理你的数据。朗读使用的是你设备/浏览器提供的系统语音能力与语音库。
+			</p>
+
+			<h2>联系我们</h2>
+			<p class="small">
+				如果你对本隐私政策有疑问，请通过 Chrome Web Store 的扩展详情页中提供的支持渠道联系开发者。
+			</p>
+		</main>
+	</body>
+</html>
+
