@@ -21,6 +21,7 @@ function render_voice_options() {
 	const voices = speechSynthesis.getVoices()
 	if (!voices?.length) return
 
+	voice_select.innerHTML = ''
 	for (const v of voices) {
 		if (v.lang !== 'en-US')
 			continue
@@ -41,6 +42,7 @@ function save_settings() {
 }
 
 async function init() {
+	console.log('init options page')
 	const opts = await load_settings()
 
 	const render_rate_label = rate => {
@@ -63,6 +65,7 @@ async function init() {
 	voice_select.addEventListener('change', save_settings)
 
 	speechSynthesis.addEventListener('voiceschanged', () => {
+		console.log('test')
 		render_voice_options()
 		if (opts.voice)
 			voice_select.value = opts.voice
