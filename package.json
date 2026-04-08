@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {},
+  "devDependencies": {
+    "chrome-types": "^0.1.425",
+    "esbuild": "^0.28.0"
+  },
+  "dependencies": {
+    "superfine": "^8.2.0"
+  }
+}
